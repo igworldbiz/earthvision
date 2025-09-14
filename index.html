@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EarthVision Properties</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #2e7d32; /* Uniform Green */
+    }
+    .navbar .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      margin-right: 15px;
+    }
+    .navbar .nav-link:hover {
+      color: #ffeb3b !important;
+    }
+
+    /* Carousel */
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+
+    /* Estate Section */
+    .estate-section h2 {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    .estate-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* About Section */
+    .about-section {
+      background: linear-gradient(to right, #2e7d32, #388e3c); /* Green gradient */
+      color: #fff;
+      padding: 80px 0;
+    }
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .about-text {
+      flex: 2;
+      padding-right: 30px;
+    }
+    .about-text h2 {
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+    .about-text a {
+      color: #ffeb3b;
+      text-decoration: none;
+    }
+    .about-text a:hover {
+      text-decoration: underline;
+    }
+    .about-image {
+      flex: 1;
+    }
+    .about-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Services Section */
+    .services-section {
+      background: #fff;
+      padding: 80px 0;
+    }
+    .services-section h2 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 40px;
+    }
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .service-card {
+      background: #fff;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      padding: 30px 20px;
+      flex: 1 1 calc(30% - 20px);
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+    .service-card:hover {
+      background-color: #2e7d32;
+      color: #fff;
+      border: 2px dotted #ffeb3b;
+      transform: translateY(-5px);
+    }
+    .service-card i {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #2e7d32;
+    }
+    .service-card:hover i {
+      color: #ffeb3b;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      background-color: #f8f9fa;
+      padding: 60px 0;
+    }
+    .contact-section h2 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 40px;
+    }
+    .contact-form {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #2e7d32; /* Uniform Green */
+      color: #fff;
+      padding: 40px 0;
+    }
+    .footer a {
+      color: #fff;
+    }
+    .footer a:hover {
+      color: #ffeb3b;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+      }
+      .about-text,
+      .about-image {
+        padding: 0;
+        text-align: center;
+      }
+      .services-grid {
+        flex-direction: column;
+      }
+      .service-card {
+        flex: 1 1 100%;
+      }
+      .contact-form {
+        padding: 20px;
+      }
+    }
+
+    /* Mobile Navbar Enhancements */
+    @media (max-width: 991.98px) {
+      .navbar-nav .nav-link {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .navbar-nav .nav-link:hover {
+        text-decoration: underline;
+        color: #ffeb3b !important;
+      }
+      .navbar-nav .nav-link.active {
+        text-decoration: underline;
+        font-weight: bold;
+        color: #ffeb3b !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><b>EarthVision Properties</b></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="index.html" class="nav-link active">HOME</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">PROJECTS</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div id="carouselHero" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/1.jpg" class="d-block w-100" alt="Palm Estate" loading="lazy">
+        <div class="carousel-caption">
+          <h3>A Better Way To Invest In Real Estate</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/2.jpg" class="d-block w-100" alt="Agriculture" loading="lazy">
+        <div class="carousel-caption">
+          <h3>A Transgenerational Profit Investment</h3>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselHero" role="button" data-slide="prev" aria-label="Previous slide">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselHero" role="button" data-slide="next" aria-label="Next slide">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>Welcome to <b>EarthVision Properties</b>, where we redefine real estate investment with a vision for sustainable growth and prosperity.</p>
+          <p>We specialize in helping individuals and organizations acquire land for a purpose—investments that generate financial returns while contributing to <b>environmental conservation</b> and <b>agricultural sustainability</b>. Through our flagship initiative, <b>PalmSpring Estate</b>, we cultivate oil palm farms that align <b>profit with purpose</b>.</p>
+          <h4>Our Mission</h4>
+          <p>Our mission is to empower people to invest in the future by harnessing the potential of land and agriculture. We believe in responsible land management and its power to transform communities, ecosystems, and economies.</p>
+        </div>
+        <div class="about-image">
+          <img src="assets/img/3.png" alt="About EarthVision" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Palm Spring Estate Section -->
+  <section class="estate-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Image on the Left -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="assets/img/palmestate.jpg" alt="Palm Spring Estate" class="img-fluid rounded shadow">
+        </div>
+        <!-- Text on the Right -->
+        <div class="col-md-6">
+          <h2 class="text-success">Palm Spring Estate, Ajebo</h2>
+          <p>
+            Discover <b>Palm Spring Estate</b>, a serene and fast-developing property located in 
+            <b>Ajebo, Ogun State</b>. Perfectly positioned for both residential and investment 
+            opportunities, the estate provides fertile land and a peaceful environment for 
+            your future projects. 
+          </p>
+          <p>
+            With plots selling at just <b>₦500,000 per 500sqm</b>, Palm Spring Estate offers you 
+            an affordable gateway to land ownership in a prime location. To make investment 
+            even easier, payments can be <b>spread conveniently over 18 months</b>, giving you 
+            the flexibility to secure your property without financial strain. This means you 
+            can begin your journey to land ownership today with a fraction of the cost upfront.
+          </p>
+          <p>
+            Beyond real estate, Palm Spring Estate also positions you to tap into the 
+            <b>highly profitable palm oil industry</b>. Nigeria is one of the largest consumers 
+            of palm oil, and demand continues to rise both locally and internationally. A well-planned 
+            oil palm farm can generate consistent income for decades, with palm trees producing fruit 
+            for over 25 years once mature. Investors in Palm Spring Estate stand to benefit not only 
+            from land value appreciation but also from long-term agricultural profitability.
+          </p>
+          <p>
+            Whether you’re planning to build your dream home, set up a farm project, or invest 
+            for future returns, Palm Spring Estate provides the perfect foundation. With rising 
+            property values in Ogun State and the immense demand for palm oil, your investment 
+            is guaranteed to multiply in worth over time.
+          </p>
+          <p><b>Secure your plot today, spread your payments with ease, and invest in tomorrow’s prosperity!</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Victoria Garden Estate Section -->
+  <section class="estate-section py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Text on the Left -->
+        <div class="col-md-6 mb-4 mb-md-0">
+          <h2 class="text-success">Victoria Garden Estate, Kara-Kekere</h2>
+          <p>
+            Welcome to <b>Victoria Garden Estate</b>, a modern residential estate strategically 
+            located at <b>Kara-Kekere, by Lotto Bus Stop</b>. Designed for comfort, accessibility, 
+            and long-term value, this estate offers you an excellent opportunity to own land in 
+            one of the fastest-developing areas along the Lagos-Ibadan Expressway corridor.
+          </p>
+          <p>
+            With plots selling at <b>₦2,000,000 per plot</b>, and a convenient <b>18-month flexible 
+            payment plan</b>, Victoria Garden Estate makes premium land ownership achievable for 
+            families, professionals, and investors. This estate is ideal for building your dream home 
+            or holding for high future returns as the area continues to expand rapidly.
+          </p>
+          <p>
+            The estate is surrounded by top attractions and landmarks, including the prestigious 
+            <b>UNICAF University</b> and the fast-growing <b>Angel Court Estate</b>. With schools, 
+            businesses, and residential estates springing up around the neighborhood, your investment 
+            here guarantees both convenience and appreciation.
+          </p>
+          <p><b>Secure your plot today, spread your payments with ease, and embrace a life of comfort and prosperity at Victoria Garden Estate.</b></p>
+        </div>
+        <!-- Image on the Right -->
+        <div class="col-md-6">
+          <img src="assets/img/victoriagarden.jpg" alt="Victoria Garden Estate" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row">
+        <!-- Column 1: Company Info -->
+        <div class="col-md-3 mb-4">
+          <h5 class="text-uppercase mb-3">EarthVision Properties</h5>
+          <p>
+            Building affordable estates and investment opportunities 
+            for families, professionals, and investors across Nigeria.
+          </p>
+        </div>
+
+        <!-- Column 2: Menus -->
+        <div class="col-md-3 mb-4">
+          <h5 class="text-uppercase mb-3">Menu</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Home</a></li>
+            <li><a href="#" class="text-white">About Us</a></li>
+            <li><a href="#" class="text-white">Estates</a></li>
+            <li><a href="#" class="text-white">Gallery</a></li>
+            <li><a href="#" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact -->
+        <div class="col-md-3 mb-4">
+          <h5 class="text-uppercase mb-3">Contact</h5>
+          <p class="mb-1"><i class="fas fa-map-marker-alt mr-2"></i> 12 Example Street, Ikeja, Lagos</p>
+          <p class="mb-1"><i class="fas fa-phone mr-2"></i> +234 800 123 4567</p>
+          <p><i class="fas fa-envelope mr-2"></i> info@earthvision.com</p>
+        </div>
+
+        <!-- Column 4: Social Media -->
+        <div class="col-md-3 mb-4">
+          <h5 class="text-uppercase mb-3">Follow Us</h5>
+          <div>
+            <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white mr-3"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center pt-3 border-top border-light">
+        <p class="mb-0">© 2025 EarthVision Properties. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
